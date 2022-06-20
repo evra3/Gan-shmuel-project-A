@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask , request
 
 
 app = Flask(__name__)
@@ -13,8 +13,7 @@ def health():
 
 @app.route('/webhook', methods = ['POST'])
 def webhook():
-    with open('readme.txt', 'w') as f:
-        f.write('Create a new text file!') 
+    print(request.data)
     return "OK", 200
 
 
