@@ -13,5 +13,5 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # configure the container to run in an executed manner
-ENTRYPOINT [ "python3", "billing.py" ]
+ENTRYPOINT [ "python3", "app.py" ]
 # ENTRYPOINT ["tail", "-f", "/dev/null"]
