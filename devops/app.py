@@ -15,7 +15,7 @@ def home():
 def health():
     return "OK", 200
 
-@app.route('/webhook', methods = ['GET'])
+@app.route('/webhook', methods = ['POST'])
 def webhook():
     with open('readme.txt', 'w') as f:
         f.write('Create a new text file!') 
